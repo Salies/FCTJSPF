@@ -4,46 +4,167 @@
 }
 
 body{
+    color:#000;
+    font-size:16px;
     font-family: 'Roboto', sans-serif;
+}
+
+hr{
+    opacity:.5;
+    margin: 15px auto;
 }
 
 h1{
     font-weight: 900;
 }
 
-#wrapper, header, header > div{
+header, footer{
     width:100%;
+}
+
+#wrapper, hr{
+    max-width: 900px;
+    overflow: auto;
+}
+
+header > div{
+    max-width:860px;
 }
 
 #wrapper, header > div{
     margin:0 auto;
-    max-width:900px;
 }
 
 header{
     height:90px;
-    background:#19456b;
     color:#fff;
 }
 
+header, footer{
+    background-color:#19456b;
+}
+
+footer{
+    height:30px;
+    margin-top:20px;
+    color:#fff;
+    line-height: 30px;
+    text-align: center;
+    align-content: center;
+    font-size:0.8em;
+}
+
 header > div{
+    width:calc(100% - 40px);
+    padding:0 20px;
     display: flex;
     height: 90px;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.4); /* TODO: PROVISÓRIO, TIRAR*/
+    justify-content: space-between;
+    overflow: hidden;
 }
 
-header > div > img{
+.title{
+    display: flex;
+    align-items: center;
+}
+
+.title img{
     height:66px;
     margin-right:20px;
 }
 
-.title > h1{
-    font-size:2.2em;
+.title h1{
+    font-size:2em;
+    display: inline-block;
 }
 
-.title > span{
+.title span{
     display: block;
     font-size:1em;
     margin-top:-6px;
 }
+
+.carrinho{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height:90px;
+}
+
+.carrinho > img{
+    height:40px;
+}
+
+.carrinho > div{
+    width:16px;
+    height:16px;
+    border-radius: 50%;
+    background:#11698e;
+    position: absolute;
+    text-align: center;
+    font-size:14px;
+    bottom: 20px;
+    bottom: 25px;
+    right: 0;
+}
+
+.p-imagem{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.p-preco, .p-nome{
+    font-weight: 600;
+}
+
+.p-preco{
+    color:#0c8616;
+}
+
+.p-categoria{
+    font-size:0.8em;
+}
+
+.produtos{
+    text-align: left;
+}
+
+.produto{
+    width:100%;
+    margin: 10px 0;
+}
+
+.stats > span{
+    display:block;
+}
+
+.produto .p-nome{
+    font-size:1.2em;
+}
+
+.produto .p-imagem{
+    width:40%;
+    height:180px;
+    float:left;
+}
+
+.produto .p-preco{
+    margin:10px 0;
+    font-size:1.6em;
+}
+
+.produto > .stats{
+    width:calc(60% - 10px);
+    float:right;
+}
+
+@media screen and (max-width: 625px){
+    header > div{
+        font-size:12px; /*diminuir o padrão diminuirá automaticamente o em relativo*/
+    }
+}
+
+/*TODO: MINIFICAR ELEMENTOS EM COMUM*/

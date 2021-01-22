@@ -1,0 +1,128 @@
+#wrapper{
+    width:100%;
+}
+
+.esconde{
+    display:none!important;
+}
+
+.destaques{
+    width:100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.sel, .produtos{
+    float:left;
+}
+
+.produtos{
+    width:calc(75% - 10px);
+    margin-left:10px;
+}
+
+.destaques, h2{
+    margin:0 auto;
+    max-width:900px;
+}
+
+.sel{
+    color:#fff;
+    width:25%;
+    background-color:#19456b;
+    user-select:none; /* Can I Use fala que tem suporte pra tudo menos IE9, acho seguro usar*/
+    padding:10px 0;
+}
+
+.destaques{
+    padding-bottom:10px;
+}
+
+h2{
+    width:calc(100% - 10px);
+    height:30px;
+    padding:10px 0 10px 10px;
+}
+
+.p-nome{
+    font-size:1em;
+}
+
+.p-preco{
+    font-size: 1.4em;
+}
+
+.destaques .p-imagem{
+    width: 100%;
+    height: 60px; 
+}
+
+.p-destaque{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 60px 2em 1.6em 1.4em 40px;
+    grid-auto-flow: column;
+    grid-gap: 10px;
+    margin-left:10px;
+    width: 890px;
+}
+
+.btn-compra{
+    border-radius: 20px;
+    width: 140px;
+    min-height:40px;
+    cursor: pointer;
+    border:1px solid #0f9b2f;
+    outline: none;
+    color: #fff;
+    background-color: #28a745;
+    font-weight: 600;
+}
+
+.btn-compra:hover{
+    background-color: #0f9b2f;
+}
+
+.btn-compra:active{
+    background-color: #0b5c1e
+}
+
+.sel > div{
+    height: 20px;
+    border:2px solid #16c79a;
+    border-radius:20px;
+    font-size:0.9em;
+    line-height: 20px;
+    text-align: center;
+    align-content: center;
+    padding:5px 10px;
+    flex-shrink: 0;
+    cursor:pointer;
+    margin:10px 20px;
+}
+
+.sel > div:hover, .sel-active{
+    background-color:#11698e;
+}
+
+.sel > span{
+    display:block;
+    margin-left:20px;
+}
+
+.produto{
+    display: inline-block;
+    height: 180px;
+}
+
+@media screen and (max-width: 625px){
+    .sel{
+        width:100%;
+    }
+
+    .produtos{
+        width:calc(100% - 20px);
+        padding:0 10px;
+        margin: 0;
+    }
+}

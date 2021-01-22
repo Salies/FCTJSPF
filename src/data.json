@@ -1,0 +1,97 @@
+[
+    {
+        "nome":"Guitarra Muito Boa",
+        "preco":9999.99,
+        "categoria":"Instrumentos Musicais"
+    },
+    {
+        "nome":"Placa de Vídeo Muito Boa",
+        "preco":4999.99,
+        "categoria":"Informática"
+    },
+    {
+        "nome":"SSD Muito Bom",
+        "preco":499.99,
+        "categoria":"Informática"
+    },
+    {
+        "nome":"Refrigerante Muito Bom",
+        "preco":2.49,
+        "categoria":"Alimentos"
+    },
+    {
+        "nome":"Lasanha Muito Boa",
+        "preco":14.99,
+        "categoria":"Alimentos"
+    },
+    {
+        "nome":"Sorvete Muito Bom",
+        "preco":14.99,
+        "categoria":"Alimentos"
+    },
+    {
+        "nome":"Console Muito Bom",
+        "preco":999.99,
+        "categoria":"Videogames"
+    },
+    {
+        "nome":"Mouse Muito Bom",
+        "preco":99.99,
+        "categoria":"Informática"
+    },
+    {
+        "nome":"Teclado Muito Bom",
+        "preco":249.99,
+        "categoria":"Informática"
+    },
+    {
+        "nome":"Jogo Muito Bom",
+        "preco":99.99,
+        "categoria":"Videogames"
+    },
+    {
+        "nome":"Controle Muito Bom",
+        "preco":119.99,
+        "categoria":"Videogames"
+    },
+    {
+        "nome":"Piano Muito Bom",
+        "preco":24999.99,
+        "categoria":"Instrumentos Musicais"
+    },
+    {
+        "nome":"Sintetizador Muito Bom",
+        "preco":4999.99,
+        "categoria":"Instrumentos Musicais"
+    }, 
+    {
+        "nome":"Mesa Muito Boa",
+        "preco":999.99,
+        "categoria":"Escritório"
+    },
+    {
+        "nome":"Cadeira Muito Boa",
+        "preco":299.99,
+        "categoria":"Escritório"
+    },
+    {
+        "nome":"Caneta Muito Boa",
+        "preco":0.99,
+        "categoria":"Escritório"
+    },
+    {
+        "nome":"Fogão Muito Bom",
+        "preco":2999.99,
+        "categoria":"Eletrodomésticos"
+    },
+    {
+        "nome":"Geladeira Muito Boa",
+        "preco":4999.99,
+        "categoria":"Eletrodomésticos"
+    }
+    ,    {
+        "nome":"Máquina de Lavar Muito Boa",
+        "preco":6999.99,
+        "categoria":"Eletrodomésticos"
+    }
+]

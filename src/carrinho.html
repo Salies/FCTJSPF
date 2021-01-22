@@ -4,10 +4,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
-        <link href="css/index.css" rel="stylesheet">
+        <link href="css/carr.css" rel="stylesheet">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>LMB – Home</title>
+        <title>LMB – Carrinho</title>
     </head>
     <body>
         <header>
@@ -19,25 +19,22 @@
                         <span>Onde o nome diz tudo</span>
                     </div>
                 </div>
-                <div class="carrinho">
-                    <img src="img/shopping-cart.svg">
-                    <!-- contador -->
-                    <div>0</div>
-                </div>
             </div>
         </header>
-        <h2 class="esconde">Mais vendidos</h2>
-        <div class="destaques esconde">
-            <div class="p-destaque"></div>
-        </div>
-        <hr/>
-        <div id="wrapper" class="esconde">
-            <div class="sel esconde">
-                <span>Filtrar:</span>
+        <div id="wrapper">
+            <h1>Carrinho de compras</h1>
+            <p>Total de itens: <span class="count">16</span></p>
+            <div class="produtos">
+                <div class="produto">
+                    <div class="p-imagem" style="background-image: url(img/produtos/0.jpg);"></div>
+                    <div class="stats">
+                        <span class="p-nome">Guitarra Muito Boa</span>
+                        <span class="p-categoria">Categoria: Instrumentos Musicais</span>
+                        <span class="p-qtd">Quantidade: 30</span>
+                        <span class="p-preco">R$9.999,99</span>
+                    </div>
+                </div>
             </div>
-            <div class="produtos"></div>
         </div>
-        <footer>© 2021 Daniel Serezane</footer>
-        <script src="js/index.js"></script>
     </body>
 </html>

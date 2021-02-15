@@ -7,6 +7,13 @@ body{
     color:#000;
     font-size:16px;
     font-family: 'Roboto', sans-serif;
+    margin-left: 0 !important; /* há um bug no chrome que as vezes adiciona margens, isso conserta, aparentemente */
+    margin-right: 0 !important;
+}
+
+a{
+    color:inherit;
+    text-decoration: none;
 }
 
 hr{
@@ -117,7 +124,7 @@ header > div{
 }
 
 .p-preco, .p-nome{
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .p-preco{
@@ -134,7 +141,6 @@ header > div{
 
 .produto{
     width:100%;
-    margin: 10px 0;
 }
 
 .stats > span{
@@ -151,11 +157,6 @@ header > div{
     float:left;
 }
 
-.produto .p-preco{
-    margin:10px 0;
-    font-size:1.6em;
-}
-
 .produto > .stats{
     width:calc(60% - 10px);
     float:right;
@@ -166,5 +167,3 @@ header > div{
         font-size:12px; /*diminuir o padrão diminuirá automaticamente o em relativo*/
     }
 }
-
-/*TODO: MINIFICAR ELEMENTOS EM COMUM*/

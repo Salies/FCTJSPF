@@ -76,7 +76,7 @@ h2{
     outline: none;
     color: #fff;
     background-color: #28a745;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .btn-compra:hover{
@@ -85,6 +85,15 @@ h2{
 
 .btn-compra:active{
     background-color: #0b5c1e
+}
+
+.produto .p-preco{
+    margin:10px 0;
+    font-size:1.6em;
+}
+
+.produto{
+    margin: 10px 0;
 }
 
 .sel > div{

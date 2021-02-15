@@ -10,6 +10,16 @@
         "categoria":"Informática"
     },
     {
+        "nome":"Mouse Muito Bom",
+        "preco":99.99,
+        "categoria":"Informática"
+    },
+    {
+        "nome":"Teclado Muito Bom",
+        "preco":249.99,
+        "categoria":"Informática"
+    },
+    {
         "nome":"SSD Muito Bom",
         "preco":499.99,
         "categoria":"Informática"
@@ -33,16 +43,6 @@
         "nome":"Console Muito Bom",
         "preco":999.99,
         "categoria":"Videogames"
-    },
-    {
-        "nome":"Mouse Muito Bom",
-        "preco":99.99,
-        "categoria":"Informática"
-    },
-    {
-        "nome":"Teclado Muito Bom",
-        "preco":249.99,
-        "categoria":"Informática"
     },
     {
         "nome":"Jogo Muito Bom",

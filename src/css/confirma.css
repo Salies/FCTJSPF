@@ -1,0 +1,58 @@
+#wrapper{
+    max-width:880px;
+    padding:10px 10px;
+}
+
+.total, .entrega{
+    font-size:1.2em;
+}
+
+.total{
+    margin-bottom:10px;
+}
+
+.produto{
+    overflow:auto;
+    margin-bottom:20px;
+}
+
+.produto .p-imagem{
+    height:100px;
+    width:20%;
+}
+
+.produto > .stats{
+    float:left;
+    margin-left:10px;
+}
+
+.entrega{
+    margin-top:10px;
+}
+
+button{
+    border-radius:40px;
+    width:280px;
+    height:50px;
+    font-size:1.1em;
+    border: 1px solid #0062cc;
+    background-color: #007bff;
+    float:right;
+    color:#fff;
+    margin-top:30px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #0069d9;
+}
+
+button:active{
+    background-color: #005cbf;
+}
+
+@media screen and (max-width: 625px){
+    button{
+        width:100%;
+    }
+}

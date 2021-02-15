@@ -4,10 +4,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
-        <link href="css/index.css" rel="stylesheet">
+        <link href="css/confirma.css" rel="stylesheet">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>LMB – Home</title>
+        <title>LMB – Confirmação de compra</title>
     </head>
     <body>
         <header>
@@ -19,28 +19,18 @@
                         <span>Onde o nome diz tudo</span>
                     </div>
                 </div>
-                <a href="./carrinho.html">
-                    <div class="carrinho">
-                        <img src="img/shopping-cart.svg">
-                        <!-- contador -->
-                        <div>0</div>
-                    </div>
-                </a>
             </div>
         </header>
-        <h2 class="esconde">Mais vendidos</h2>
-        <div class="destaques esconde">
-            <div class="p-destaque"></div>
-        </div>
-        <hr/>
-        <div id="wrapper" class="esconde">
-            <div class="sel esconde">
-                <span>Filtrar:</span>
-            </div>
+        <div id="wrapper">
+            <h1>Resumo do pedido</h1>
+            <p class="total">Total de itens: <span>0</span></p>
             <div class="produtos"></div>
+            <h1>Detalhes da entrega</h1>
+            <div class="entrega"></div>
+            <a href="./index.html"><button>VOLTAR AO CATÁLOGO</button></a>
         </div>
         <footer>© 2021 Daniel Serezane</footer>
         <script src="js/main.js"></script>
-        <script src="js/index.js"></script>
+        <script src="js/confirma.js"></script>
     </body>
 </html>

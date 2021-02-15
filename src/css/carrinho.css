@@ -1,0 +1,114 @@
+#wrapper h1{
+    padding:10px 0;
+}
+
+button{
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]{
+    cursor: pointer;
+}
+
+header > div > div:nth-of-type(2){
+    text-align: right;
+}
+
+input[type="number"]{
+    width:35px;
+    height:18px;
+}
+
+#wrapper{
+    max-width: 880px;
+    padding: 0 10px;
+}
+
+#wrapper > p{
+    padding-bottom:10px;
+}
+
+.btn-exclui{
+    border-radius: 20px;
+    font-size: 10px;
+    width: 94px;
+    min-height: 21px;
+    border: 1px solid #dc3545;
+    background-color: #dc3545;
+    margin-top: 10px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.btn-exclui:hover{
+    background-color: #c82333;
+}
+
+.btn-exclui:active{
+    background-color: #bd2130;
+}
+
+.btn-final{
+    border-radius:40px;
+    width:220px;
+    height:50px;
+    font-size:0.9em;
+    font-weight:700;
+    border: 1px solid #c69500;
+    background-color: #ffc107;
+}
+
+.btn-final:hover, .btn-final:active{
+    background-color: #d39e00;
+}
+
+.p-final{
+    font-size:1.6em;
+}
+
+.produto{
+    margin-bottom:20px;
+}
+
+.total{
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top:40px;
+}
+
+.total > span{
+    font-weight: 900;
+    font-size:1.4em;
+    padding-right:10px;
+}
+
+.entrega{
+    font-size:1.2em;
+    margin-bottom:20px;
+}
+
+.frete{
+    font-size:1.3em;
+    font-weight: 700;
+}
+
+.entre, form, .produto{
+    overflow: auto;
+}
+
+@media screen and (max-width: 625px){
+    .total{
+        display: block;
+    }
+
+    .btn-final, .total > span{
+        width:100%;
+    }
+
+    .btn-final{
+        margin-top:10px;
+    }
+}

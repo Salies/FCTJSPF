@@ -3,22 +3,10 @@ const destaques = document.querySelector('.destaques > .p-destaque'),
 w = document.querySelector('#wrapper > .produtos'), 
 sel = document.querySelector('.sel'),
 carr = document.querySelector('.carrinho > div');
-let categorias = new Array(), carrinho = {i:0}, data;
-
-function formataPreco(val){ /*TODO: passar função pra main.js*/
-    let int = Math.floor(val), sint = String(int);
-
-    if(sint.length > 3){
-        for(let i = sint.length - 3; i > 0; i -= 3){
-            sint = sint.substr(0, i) + '.' + sint.substr(i, sint.length);
-        }
-    }
-
-    return `${sint},${(val - int).toFixed(2) * 100}`;
-}
+let categorias = new Array(), carrinho = {produtos:{}, i:0}, data;
 
 function geraProduto(index, p, bloco){
-    return `<div class="p-imagem" style="background-image: url(img/produtos/${index}.jpg);"></div>${bloco ? '<div class="stats">' : ''} <span class="p-nome">${p.nome}</span><span class="p-categoria">Categoria: ${p.categoria}</span><span class="p-preco">R$${formataPreco(p.preco)}</span><button type="button" class="btn-compra" value="${index}">COMPRAR</button>${bloco ? '</div>' : ''}`;
+    return `<div class="p-imagem" style="background-image: url(img/produtos/${index}.jpg);"></div>${bloco ? '<div class="stats">' : ''} <span class="p-nome">${p.nome}</span><span class="p-categoria">Categoria: ${p.categoria}</span><span class="p-preco">${formataPreco.format(p.preco)}</span><button type="button" class="btn-compra" value="${index}">COMPRAR</button>${bloco ? '</div>' : ''}`;
 }
 
 function seleciona(){
@@ -42,14 +30,36 @@ function seleciona(){
 }
 
 function updateCarr(val){
+    sessionStorage.setItem('car', JSON.stringify(carrinho));
     return carr.innerHTML = val;
 }
 
 function addCarr(){
-    carrinho[this.value] = data[this.value];
-    if(!carrinho[this.value]["qtd"]) carrinho[this.value]["qtd"] = 1;
-    else carrinho[this.value]["qtd"]++;
+    if(carrinho.i + 1 > 50){ //se for passar de 50 itens
+        return alert('Carrinho cheio! (máx. 50 itens)')
+    }
+
+    if(!carrinho.produtos[this.value]){
+        carrinho.produtos[this.value] = data[this.value];
+        carrinho.produtos[this.value]["qtd"] = 1;
+    }
+    else carrinho.produtos[this.value]["qtd"]++;
     updateCarr(++carrinho.i);
+}
+
+function initCar(){
+    let c = sessionStorage.getItem('car');
+    if(c){ // se o carrinho existir
+        try{ // se for um JSON válido (não é exatamente necessário, mas evita bugs)
+            c = JSON.parse(c);
+        }catch(err){
+            return false;
+        }
+        // existe um carrinho válido
+        carrinho = c;
+        carr.innerHTML = carrinho.i;
+        return true;
+    }
 }
 
 function init(){
@@ -70,11 +80,13 @@ function init(){
         el.addEventListener('click', seleciona, el);
     });
 
-    document.querySelectorAll('.btn-compra').forEach(btt =>{
-        btt.addEventListener('click', addCarr);
+    document.querySelectorAll('.btn-compra').forEach(btn =>{
+        btn.addEventListener('click', addCarr);
     });
 
     categorias = []; //limpa o array para ser usado depois
+
+    if(!initCar()) sessionStorage.setItem('car', JSON.stringify(carrinho)); //para caso o usuário clique no carrinho com 0 itens
 
     document.querySelectorAll('.esconde').forEach(el => { //exibe, pois agora a página pode ser usada
         el.classList.remove('esconde');
